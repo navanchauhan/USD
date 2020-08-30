@@ -15,7 +15,7 @@ RUN apt-get -qq update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/*
 
 # Build + install USD
-RUN git clone --branch "arm64" --depth 1 https://github.com/PixarAnimationStudios/USD.git /usr/src/usd
+RUN git clone --branch "arm64" --depth 1 https://github.com/kubaroth/USD.git /usr/src/usd
 RUN python ./build_scripts/build_usd.py -v --no-usdview "${USD_INSTALL}" && \
   rm -rf "${USD_REPO}" "${USD_INSTALL}/build" "${USD_INSTALL}/src"
 
