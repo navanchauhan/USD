@@ -1,9 +1,9 @@
-FROM python:3-slim AS builder
+FROM python:2-slim AS builder
 
 WORKDIR /usr/src/usd
 
 # Configuration
-ARG USD_RELEASE="20.08"
+ARG USD_RELEASE="19.11"
 ARG USD_INSTALL="/usr/local/usd"
 ENV PYTHONPATH="${PYTHONPATH}:${USD_INSTALL}/lib/python"
 ENV PATH="${PATH}:${USD_INSTALL}/bin"
