@@ -13,7 +13,7 @@ jobs:
         id: prepare
         run: |
           DOCKER_IMAGE=navanchauhan/usd
-          DOCKER_PLATFORMS=linux/amd64,linux/arm64
+          DOCKER_PLATFORMS=linux/arm64
           VERSION=latest
           TAGS="--tag ${DOCKER_IMAGE}:${VERSION}"
           echo ::set-output name=docker_image::${DOCKER_IMAGE}
